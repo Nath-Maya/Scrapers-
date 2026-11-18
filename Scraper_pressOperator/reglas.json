@@ -1,0 +1,265 @@
+{
+  "reglas": [
+    {
+      "operador": "Daniel Guerrero",
+      "website": ["APD Printing Canada"],
+      "filtro": ["Business Cards", "9x12 Pocket folder"],
+      "reasignar": true
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": ["Whole Sale Pocket Folders"],
+      "filtro": ["Business Cards", "9x12 Pocket folder"]
+    },
+    {
+      "operador": "Gang 100lb Gloss Text",
+      "website": ["Whole Sale Pocket Folders", "APD Printing Canada", "Trade Only Folders"],
+      "filtro": ["FL-100LB", "BR-100LB"]
+    },
+    {
+      "operador": "Gang 14pt Gloss Cover C2S",
+      "website": ["Whole Sale Pocket Folders", "APD Printing Canada", "Trade Only Folders"],
+      "filtro": ["PC-AQ14", "Door Hangers - 14pt + AQ", "GCAQ-001-new"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": ["Whole Sale Pocket Folders", "APD Printing Canada", "Trade Only Folders"],
+      "filtro": ["Legal", "Tri - Panel"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": ["Trade Only Folders"],
+      "filtro": ["Business Cards", "9x12 Pocket folder"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "filtro": ["Small"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "filtro": ["9x12 Economy Pocket Folder", "9x12 Standard Pocket Folder / Full Color Process"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "filtro": ["business card"]
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": "todos",
+      "filtro": ["postcard"]
+    },
+    {
+      "operador": "Daniel Guerrero",
+      "website": "todos",
+      "filtro": [""],
+      "excluir": ["pocket folder", "folder", "business card", "postcard", "flyer", "brochure",
+                  "door hanger", "booklet", "sticker|label", "envelope", "letterhead",
+                  "rack card|greeting", "scorecard", "binder|presentation", "notepad",
+                  "banner|sign", "box|packag|sleeve", "calendar", "bookmark", "ticket|card"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": "todos",
+      "filtro": ["booklet"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "filtro": ["calendar"]
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": ["APD Printing Canada", "Trade Only Folders"],
+      "filtro": ["tri-panel", "tri panel", "tri -panel", "tri - panel"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": ["Whole Sale Pocket Folders", "Presentation Folders", "Presto Folders"],
+      "filtro": ["tri-panel", "tri panel", "tri -panel", "tri - panel"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Pocket Folder - Gusset / High Capacity"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "tipo": ["Pocket Folder - Legal"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": "todos",
+      "tipo": ["Pocket Folder - Pequeños (4x9, 6x9, Small)"]
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": "todos",
+      "tipo": ["Pocket Folder 9x12", "Presentation Folders"]
+    },
+    {
+      "operador": "Daniel Guerrero",
+      "website": "todos",
+      "tipo": ["Pocket Folder - Curved / Semicurved", "Pocket Folder - Reinforced", "Pocket Folder - Otros tamaños / estilos"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "tipo": ["Certificate Folders", "Tax Folders", "Folders - Otros", "Business Cards"]
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": "todos",
+      "tipo": ["Postcards"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": "todos",
+      "tipo": ["Pruebas / Cotizaciones / Custom"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Promocionales / POP"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "tipo": ["Covers / Report Covers / Inserts", "Forms (NCR / Laser)"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Bottle Neckers"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": "todos",
+      "tipo": ["Libros / Encuadernación"]
+    },
+    {
+      "operador": "Gang 100lb Gloss Text",
+      "website": "todos",
+      "tipo": ["Flyers"]
+    },
+    {
+      "operador": "Gang 100lb Gloss Text",
+      "website": ["Presentation Folders", "Presto Folders"],
+      "tipo": ["Brochures"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Brochures"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "tipo": ["Door Hangers"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": "todos",
+      "tipo": ["Stickers / Labels"]
+    },
+    {
+      "operador": "Daniel Guerrero",
+      "website": "todos",
+      "tipo": ["Envelopes", "Letterhead"]
+    },
+    {
+      "operador": "Gang 14pt Gloss Cover C2S",
+      "website": "todos",
+      "tipo": ["Rack Cards"]
+    },
+    {
+      "operador": "Gang 14pt Gloss Cover C2S",
+      "website": ["APD Printing Canada"],
+      "filtro": ["greeting"],
+      "productos": [
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-2",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-3",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-4",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-5",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-6",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-7",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-8",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-9",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-10",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-11",
+        "Bundle Gift Season – Greeting Cards + Gift Card Holders - Bundle-Gift-Season-G-C-H-12",
+        "Greeting Cards - Greeting-C",
+        "Greeting Cards - Greeting-C-1",
+        "Greeting Cards + 14pt Writable + AQ (C1S) - Greeting-CW"
+      ]
+    },
+    {
+      "operador": "Gang 14pt Gloss Cover C2S",
+      "website": ["Whole Sale Pocket Folders"],
+      "filtro": ["TentC"],
+      "productos": ["Tent Cards - 14pt - TentC"]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Cards - Otros"]
+    },
+    {
+      "operador": "Yogeshwar Rao",
+      "website": "todos",
+      "tipo": ["Bookmarks", "Tickets", "Invitations", "Posters"]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": ["APD Printing Canada"],
+      "filtro": ["greeting"],
+      "productos": [
+        "Greeting Cards - 16pt Raised Metallic Foil - GC-004",
+        "Greeting Cards - Matte Finish - GCM-001",
+        "Greeting Cards - Raised Spot UV - GC-005",
+        "Greeting Cards - UV High Gloss - GCUV-001",
+        "Greeting Cards -14pt Gloss Cover C1S+ AQ - GC-AQ",
+        "Greeting Cards -14pt Soft touch laminating 1 side - GC006",
+        "Realtor Custom Shape Greeting card - Realto"
+      ]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": ["Canada Scorecards", "Presto Folders"],
+      "filtro": ["greeting"],
+      "productos": [
+        "Greeting Cards - Raised Metallic Foil - GC-004",
+        "Greeting Cards - Raised Spot UV - GC-005"
+      ]
+    },
+    {
+      "operador": "Ana Esposito",
+      "website": ["Presentation Folders"],
+      "filtro": ["greeting"],
+      "productos": [
+        "Greeting Cards - Raised Metallic Foil - GC-004",
+        "Greeting Cards - Raised Spot UV - GC-005",
+        "Realtor Custom Shape Greeting card - Realto"
+      ]
+    },
+    {
+      "operador": "Minel Carvajal",
+      "website": "todos",
+      "tipo": ["Scorecards", "Notepads"]
+    },
+    {
+      "operador": "Daniel Guerrero",
+      "website": "todos",
+      "tipo": ["Boxes / Packaging"]
+    },
+    {
+      "operador": "Elizabeth Sulzberger",
+      "website": ["Trade Only Folders", "Whole Sale Pocket Folders"],
+      "tipo": ["Greeting Cards"]
+    }
+  ]
+}

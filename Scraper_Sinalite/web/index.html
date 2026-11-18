@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tarifario Sinalite</title>
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="side">
+    <div class="brand">
+      <img src="logo.svg" alt="" width="44" height="44">
+      <div>
+        <div class="brand-name">Tarifario</div>
+        <div class="brand-tag">Buscador de precios Sinalite</div>
+      </div>
+    </div>
+
+    <div class="side-block">
+      <div class="side-h">Consultados</div>
+      <div id="history" class="recent"></div>
+      <p id="historyEmpty" class="side-empty">Aún no has consultado productos.</p>
+    </div>
+
+    <div class="session">
+      <div><span class="dot"></span><b>Proveedor: sinalite.com</b></div>
+      <p>Precios de mayorista de tu cuenta, tal como los muestra la web.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div id="crumbs" class="crumbs">Buscar producto</div>
+      <button id="refreshBtn" class="btn btn-ghost" type="button" hidden>
+        <svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M20 10A8 8 0 0 0 6 5.3L4 10m16 4-2 4.7A8 8 0 0 1 4 14"/></svg>
+        Actualizar precios
+      </button>
+    </div>
+
+    <form id="scrapeForm" class="search">
+      <div class="field grow">
+        <label for="urlInput">Link del producto</label>
+        <div class="input">
+          <svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
+          <input id="urlInput" type="url" required autocomplete="off"
+                 placeholder="https://sinalite.com/en_ca/print-products/postcards/14pt-uv-high-gloss.html">
+        </div>
+      </div>
+      <div class="field qty-field">
+        <label for="qtyInput">Cantidades <span class="opt">(opcional)</span></label>
+        <div class="input">
+          <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <input id="qtyInput" type="text" autocomplete="off" placeholder="250, 500, 1000">
+        </div>
+      </div>
+      <button id="scrapeBtn" class="btn btn-primary" type="submit">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Obtener precios
+      </button>
+    </form>
+    <div id="status" class="status" hidden></div>
+
+    <section id="empty" class="empty">
+      <img src="logo.svg" alt="" width="64" height="64">
+      <h2>Pega el link de un producto de sinalite.com</h2>
+      <p>Verás la lista de precios de todas sus variaciones. Puedes indicar solo las cantidades que te interesan.</p>
+      <p class="muted">La primera consulta de un producto tarda entre 30 segundos y 2 minutos; después queda guardada.</p>
+    </section>
+
+    <section id="product" hidden>
+      <div class="product-head">
+        <div class="p-img"><span class="card1"></span><span class="card2"></span></div>
+        <div class="p-title">
+          <h1 id="pName"></h1>
+          <div id="pMeta" class="p-meta"></div>
+        </div>
+        <div class="p-actions">
+          <a id="providerLink" class="btn btn-ghost" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"/></svg>
+            Ver en Sinalite
+          </a>
+          <button id="csvBtn" class="btn btn-ghost" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            CSV tabla
+          </button>
+          <button id="csvAllBtn" class="btn btn-ghost" type="button">
+            <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            CSV todas las combinaciones
+          </button>
+        </div>
+      </div>
+      <div id="warnings"></div>
+
+      <div class="panel">
+        <div class="toolbar">
+          <div id="filters" class="filters"></div>
+          <div class="toolbar-right">
+            <div class="seg" id="modeSeg">
+              <button type="button" data-mode="total" class="on">Total</button>
+              <button type="button" data-mode="unit">Por unidad</button>
+            </div>
+            <input type="hidden" id="modeSel" value="total">
+          </div>
+        </div>
+
+        <div class="toolbar sub">
+          <label class="pill"><small>Filas</small><select id="rowSel"></select></label>
+          <label class="pill"><small>Columnas</small><select id="colSel"></select></label>
+          <label class="check"><input type="checkbox" id="hideEmpty" checked> Ocultar filas y columnas sin precio</label>
+        </div>
+
+        <div id="qtyBox" class="qtys">
+          <small class="qty-title">Cantidades</small>
+          <div id="qtyChips" class="qty-chips"></div>
+          <button type="button" class="link" id="qtyAll">Todas</button>
+          <button type="button" class="link" id="qtyNone">Ninguna</button>
+          <span id="qtyNote" class="qty-note"></span>
+        </div>
+
+        <div id="extraChipsBoxes"></div>
+
+        <div class="table-wrap">
+          <table id="priceTable"></table>
+        </div>
+
+        <div class="legend">
+          <span><i class="lg-sel"></i>Selección (clic en una celda)</span>
+          <span><i class="lg-best"></i>Mejor precio por unidad de la columna</span>
+          <span><i class="lg-na"></i>— Combinación no disponible</span>
+          <span class="legend-cur">Precios en <b id="cur"></b></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
